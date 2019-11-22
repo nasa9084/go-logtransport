@@ -26,3 +26,9 @@ func Example() {
 }
 
 ```
+
+or if you do not need to customize HTTP transport, just import `overwrite` subpackage with blank identifier:
+
+``` go
+import _ "github.com/nasa9084/go-logtransport/overwrite"
+```
