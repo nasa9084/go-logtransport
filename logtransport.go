@@ -14,14 +14,14 @@ var defaultLogger = log.New(os.Stdout, "", log.LstdFlags)
 
 // Logger is an interface of a logger, which is used for logging
 // outgoing HTTP request and incoming HTTP response.
-type Logger interface {
+type Printer interface {
 	Print(args ...interface{})
 }
 
 // Transport is a wrapper of http.RoundTripper.
 type Transport struct {
 	Transport http.RoundTripper
-	Logger    Logger
+	Logger    Printer
 }
 
 // RoundTrip implements http.RoundTripper interface.
